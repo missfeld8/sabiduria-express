@@ -76,16 +76,15 @@
     
         links.forEach(link => {
             link.addEventListener('click', (e) => {
-                e.preventDefault(); // Impede o redirecionamento imediato
+                e.preventDefault(); 
     
-                const linkText = link.textContent.trim(); // Texto do link clicado
-                const targetURL = link.href; // URL de destino
+                const linkText = link.textContent.trim(); 
+                const targetURL = link.href; 
     
                 const payload = {
                     content: `Alguém clicou no link: **${linkText}**. Confira no site!`
                 };
     
-                // Envia o clique para o Discord
                 fetch(discordWebhookURL, {
                     method: 'POST',
                     headers: {
@@ -93,17 +92,14 @@
                     },
                     body: JSON.stringify(payload),
                 }).then(response => {
-                    // Aguarda o envio ao Discord antes de redirecionar
                     if (response.ok) {
                         console.log(`Mensagem enviada ao Discord: ${linkText}`);
                     } else {
                         console.error(`Erro ao enviar mensagem ao Discord: ${response.status}`);
                     }
-                    // Sempre redireciona mesmo com erro
                     window.location.href = targetURL;
                 }).catch(error => {
                     console.error(`Erro no fetch: ${error}`);
-                    // Redireciona mesmo com falha na requisição
                     window.location.href = targetURL;
                 });
             });
