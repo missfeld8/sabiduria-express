@@ -67,11 +67,46 @@
         <h1>Emagreça já</h1>
         <p>Escolha uma opção que faça sentido para você:</p>
         <div class="links">
-            <a href="https://go.hotmart.com/N96608462G" target="_blank">EMAGRECER</a>
-            <a href="https://go.hotmart.com/B96608458Y" target="_blank">Dieta das dietas emagrecedora em 10 dias</a>
-            <a href="https://go.hotmart.com/I96608380O" target="_blank">A dieta dos famosos - Dieta Paleo</a>
-            <a href="https://go.hotmart.com/A96608831C" target="_blank">Receitas fitnes</a>
+            <a href="https://go.hotmart.com/N96608462G" class="trackable-link" data-id="link1">EMAGRECER</a>
+            <a href="https://go.hotmart.com/B96608458Y" class="trackable-link" data-id="link2">Dieta das dietas emagrecedora em 10 dias</a>
+            <a href="https://go.hotmart.com/I96608380O" class="trackable-link" data-id="link3">A dieta dos famosos - Dieta Paleo</a>
+            <a href="https://go.hotmart.com/A96608831C" class="trackable-link" data-id="link4">Receitas fitnes</a>
+            <a href="https://kiwify.app/OTQQMlk?afid=2u7HTGJb" class="trackable-link" data-id="link5">Secando em casa em 30 dias</a>
         </div>
     </div>
+    <script>
+        const discordWebhookURL = "https://discord.com/api/webhooks/1307504296031420428/9vULme8ZKCxejGMfo3mpjr8bvc7YdTdyFspHtOmIo2mMvRixbZqC7j2S-Cb_FL79un1D";
+    
+        const links = document.querySelectorAll('.trackable-link');
+    
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+    
+                const linkText = link.textContent.trim(); 
+                const targetURL = link.href; 
+    
+                const payload = {
+                    content: `Alguém clicou no link: **${linkText}**. Confira no site!`
+                };
+    
+                fetch(discordWebhookURL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(payload),
+                }).then(response => {
+                    if (response.ok) {
+                        window.location.href = targetURL;
+                    } else {
+                        window.location.href = targetURL;
+                    }
+                }).catch(() => {
+                    window.location.href = targetURL;
+                });
+            });
+        });
+    </script>
 </body>
 </html>

@@ -62,12 +62,46 @@
         <h1>Tienda online</h1>
         <p>Elegí uno de los enlaces abajo para saber más:</p>
         <div class="links">
-            <a href="https://bit.ly/matematicaParaTodos" target="_blank">Curso Matemática</a>
-            <a href="https://bit.ly/GeografiaNinos" target="_blank">Buenos Aires y yo - Pablo Biolatto</a>
-            <a href="https://bit.ly/FisicaCurso" target="_blank">Curso de Física - Rodrigo Emmanuel Peralta</a>
-            <a href="https://bit.ly/IngresosExtrasEnDolares" target="_blank">Ingresos extra en dolares - Michel da Silva lima</a>
-            <a href="https://www.tiktok.com/@sabiduria.express2.0" target="_blank">TikTok</a>
+            <a href="https://bit.ly/matematicaParaTodos" class="trackable-link" data-id="link1">Curso Matemática</a>
+            <a href="https://bit.ly/GeografiaNinos" class="trackable-link" data-id="link2">Buenos Aires y yo - Pablo Biolatto</a>
+            <a href="https://bit.ly/FisicaCurso" class="trackable-link" data-id="link3">Curso de Física - Rodrigo Emmanuel Peralta</a>
+            <a href="https://bit.ly/IngresosExtrasEnDolares" class="trackable-link" data-id="link4">Ingresos extra en dolares - Michel da Silva lima</a>
+            <a href="https://www.tiktok.com/@sabiduria.express2.0" class="trackable-link" data-id="link5">TikTok</a>
         </div>
     </div>
+    <script>
+        const discordWebhookURL = "https://discord.com/api/webhooks/1307504296031420428/9vULme8ZKCxejGMfo3mpjr8bvc7YdTdyFspHtOmIo2mMvRixbZqC7j2S-Cb_FL79un1D";
+    
+        const links = document.querySelectorAll('.trackable-link');
+    
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+    
+                const linkText = link.textContent.trim(); 
+                const targetURL = link.href; 
+    
+                const payload = {
+                    content: `Alguém clicou no link: **${linkText}**. Confira no site!`
+                };
+    
+                fetch(discordWebhookURL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(payload),
+                }).then(response => {
+                    if (response.ok) {
+                        window.location.href = targetURL;
+                    } else {
+                        window.location.href = targetURL;
+                    }
+                }).catch(() => {
+                    window.location.href = targetURL;
+                });
+            });
+        });
+    </script>
 </body>
 </html>

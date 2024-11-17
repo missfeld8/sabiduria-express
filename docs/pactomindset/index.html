@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="icon" href="favico.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favico.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacto Mindset</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Logo da Loja">
+        <h1>Inicie sua mudança de vida!</h1>
+        <p>Escolha uma opção que faça sentido para você:</p>
+        <div class="links">
+            <a href="https://kiwify.app/fGToSkj?afid=FAqY9cBx" class="trackable-link" data-id="link1">Sua primeira venda em 7 dias!</a>
+            <a href="https://pay.kiwify.com.br/6DLx13K?afid=iHHdpTz4" class="trackable-link" data-id="link2">Método faturando com a Shopee</a>
+            <a href="https://kiwify.app/ouVZFCH?afid=GfzGpOqO" class="trackable-link" data-id="link3">Vender sem aparecer Shopee</a>
+            <a href="https://go.hotmart.com/D96623096H" class="trackable-link" data-id="link4">Método virada de chave</a>
+            <a href="https://go.hotmart.com/D96623066E" class="trackable-link" data-id="link5">Workshop de análise de métricas 3.0</a>
+            <a href="https://go.hotmart.com/F96623106G" class="trackable-link" data-id="link6">MD10K - Método Display 10k</a>
+            <a href="https://go.hotmart.com/M96623116X" class="trackable-link" data-id="link7">Método Dolar X</a>
+        </div>
+    </div>
+    <script>
+        const discordWebhookURL = "https://discord.com/api/webhooks/1307504296031420428/9vULme8ZKCxejGMfo3mpjr8bvc7YdTdyFspHtOmIo2mMvRixbZqC7j2S-Cb_FL79un1D";
+    
+        const links = document.querySelectorAll('.trackable-link');
+    
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+    
+                const linkText = link.textContent.trim(); 
+                const targetURL = link.href; 
+    
+                const payload = {
+                    content: `Alguém clicou no link: **${linkText}**. Confira no site!`
+                };
+    
+                fetch(discordWebhookURL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(payload),
+                }).then(response => {
+                    if (response.ok) {
+                        window.location.href = targetURL;
+                    } else {
+                        window.location.href = targetURL;
+                    }
+                }).catch(() => {
+                    window.location.href = targetURL;
+                });
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>
