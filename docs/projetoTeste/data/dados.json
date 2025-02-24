@@ -1,0 +1,12 @@
+{
+    "servicos": [
+        {"nome": "Desenvolvimento Web", "descricao": "Criamos sites modernos e responsivos."},
+        {"nome": "Marketing Digital", "descricao": "Aumente sua presença online com estratégias eficazes."},
+        {"nome": "Consultoria", "descricao": "Orientação especializada para seu crescimento."}
+    ],
+    "portfolio": [
+        {"nome": "Projeto X", "descricao": "Website institucional para uma startup."},
+        {"nome": "Projeto Y", "descricao": "E-commerce para uma loja de moda."},
+        {"nome": "Projeto Z", "descricao": "Landing page para campanha publicitária."}
+    ]
+}
