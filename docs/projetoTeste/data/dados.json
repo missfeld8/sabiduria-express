@@ -5,8 +5,8 @@
         {"nome": "Consultoria", "descricao": "Orientação especializada para seu crescimento."}
     ],
     "portfolio": [
-        {"nome": "Projeto X", "descricao": "Website institucional para uma startup."},
-        {"nome": "Projeto Y", "descricao": "E-commerce para uma loja de moda."},
-        {"nome": "Projeto Z", "descricao": "Landing page para campanha publicitária."}
+        {"nome": "Projeto X", "descricao": "Website institucional para uma startup.", "imagem": "img/projeto1.jpg", "preco": "5000", "precoAtivo": 1},
+        {"nome": "Projeto Y", "descricao": "E-commerce para uma loja de moda.", "imagem": "img/projeto2.jpg", "preco": "7000", "precoAtivo": 0},
+        {"nome": "Projeto Z", "descricao": "Landing page para campanha publicitária.", "imagem": "img/projeto3.jpg", "preco": "3000", "precoAtivo": 1}
     ]
 }

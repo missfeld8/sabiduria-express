@@ -14,19 +14,30 @@ document.addEventListener("DOMContentLoaded", () => {
             data.portfolio.forEach(projeto => {
                 const div = document.createElement("div");
                 div.classList.add("card");
-                div.innerHTML = `<h3>${projeto.nome}</h3><p>${projeto.descricao}</p>`;
+                div.innerHTML = `
+                    <h3>${projeto.nome}</h3>
+                    <img src="${projeto.imagem}" alt="${projeto.nome}">
+                    <p>${projeto.descricao}</p>
+                    ${projeto.precoAtivo ? `<p><strong>Preço:</strong> R$ ${projeto.preco}</p>` : ""}
+                    <button onclick="expandirProjeto('${projeto.nome}', '${projeto.descricao}', '${projeto.imagem}', '${projeto.preco}', ${projeto.precoAtivo})">Ver mais</button>
+                `;
                 listaPortfolio.appendChild(div);
             });
         })
         .catch(error => console.error("Erro ao carregar dados:", error));
 });
 
-const formContato = document.getElementById("form-contato");
-const mensagemSucesso = document.getElementById("mensagem-sucesso");
-
-formContato.addEventListener("submit", event => {
-    event.preventDefault();
-    mensagemSucesso.classList.remove("hidden");
-    setTimeout(() => mensagemSucesso.classList.add("hidden"), 3000);
-    formContato.reset();
-});
+function expandirProjeto(nome, descricao, imagem, preco, precoAtivo) {
+    const modal = document.createElement("div");
+    modal.classList.add("modal");
+    modal.innerHTML = `
+        <div class="modal-content">
+            <span class="close" onclick="this.parentElement.parentElement.remove()">&times;</span>
+            <h3>${nome}</h3>
+            <img src="${imagem}" alt="${nome}">
+            <p>${descricao}</p>
+            ${precoAtivo ? `<p><strong>Preço:</strong> R$ ${preco}</p>` : ""}
+        </div>
+    `;
+    document.body.appendChild(modal);
+}
