@@ -78,6 +78,7 @@ nav ul li a {
 
 textarea {
     width: 100%;
+    max-width: 600px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -97,3 +98,4 @@ textarea {
 .btn:hover {
     background-color: #0056b3;
 }
+
