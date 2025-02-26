@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missfeld Tech - Otimização no Google Maps</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="assets/images/logo-missfeld.png" alt="Missfeld Tech">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home" data-translate="menu_home">Home</a></li>
+        <li><a href="#servicos" data-translate="menu_servicos">Serviços</a></li>
+        <li><a href="#planos" data-translate="menu_planos">Planos</a></li>
+        <li><a href="#contato" data-translate="menu_contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <button id="theme-toggle">🌙</button>
+    <button id="language-toggle">PT</button>
+  </header>
+
+  <!-- Home (Hero Section) -->
+  <section id="home">
+    <div class="hero-content">
+      <h1 data-translate="home_title">Maximize sua Visibilidade no Google Maps com Missfeld Tech</h1>
+      <p data-translate="home_subtitle">Otimização especializada para empresas locais, elevando sua presença online e atraindo mais clientes.</p>
+      <a href="#planos" class="cta-button" data-translate="home_cta">Comece Agora</a>
+    </div>
+    <div class="hero-image">
+      <iframe
+        style="border:0; width: 100%; height: 400px;"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197584455393!2d-46.63273918502229!3d-23.5345665662491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5858e8a7f7b7%3A0x7d9e1c9b9c5b5b5b!2sMercado%20Municipal%20de%20S%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1697311234567!5m2!1spt-BR!2sbr"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        frameborder="0">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Sobre Nós -->
+  <section id="sobre">
+    <div class="sobre-content">
+      <h2 data-translate="sobre_titulo">Sobre Nós</h2>
+      <p data-translate="sobre_texto">
+        Na Missfeld Tech, somos especialistas em otimização no Google Maps, ajudando empresas locais a aumentar sua visibilidade e atrair mais clientes. Com uma equipe dedicada e soluções personalizadas, estamos comprometidos em impulsionar o sucesso do seu negócio.
+      </p>
+      <h3 data-translate="sobre_missao">Nossa Missão</h3>
+      <p data-translate="sobre_missao_texto">
+        Facilitar o crescimento de empresas locais por meio de estratégias de otimização digital eficazes e acessíveis.
+      </p>
+      <h3 data-translate="sobre_valores">Nossos Valores</h3>
+      <ul>
+        <li data-translate="sobre_valores_item1">Transparência</li>
+        <li data-translate="sobre_valores_item2">Inovação</li>
+        <li data-translate="sobre_valores_item3">Compromisso com resultados</li>
+      </ul>
+    </div>
+    <div class="sobre-image">
+      <img src="assets/images/sobre-nos.jpg" alt="Sobre Nós">
+    </div>
+  </section>
+
+  <!-- Planos -->
+  <section id="planos">
+    <h2 data-translate="planos_title">Escolha o Plano Ideal para Sua Empresa</h2>
+    <div class="planos-container">
+      <div class="plano">
+        <h3 data-translate="plano_basico">Plano Básico</h3>
+        <p class="preco" data-translate="plano_basico_preco">R$ 99/mês</p>
+        <ul>
+          <li data-translate="plano_basico_item1">Otimização básica do Google Meu Negócio</li>
+          <li data-translate="plano_basico_item2">Relatório mensal</li>
+        </ul>
+        <a href="#" class="cta-button" data-translate="plano_basico_cta">Assine Agora</a>
+      </div>
+      <div class="plano destaque">
+        <h3 data-translate="plano_profissional">Plano Profissional</h3>
+        <p class="preco" data-translate="plano_profissional_preco">R$ 249/mês</p>
+        <ul>
+          <li data-translate="plano_profissional_item1">Otimização completa</li>
+          <li data-translate="plano_profissional_item2">Gestão de avaliações</li>
+          <li data-translate="plano_profissional_item3">Relatório semanal</li>
+        </ul>
+        <a href="#" class="cta-button" data-translate="plano_profissional_cta">Assine Agora</a>
+      </div>
+      <div class="plano">
+        <h3 data-translate="plano_premium">Plano Premium</h3>
+        <p class="preco" data-translate="plano_premium_preco">R$ 499/mês</p>
+        <ul>
+          <li data-translate="plano_premium_item1">Otimização avançada</li>
+          <li data-translate="plano_premium_item2">Consultoria personalizada</li>
+          <li data-translate="plano_premium_item3">Relatório diário</li>
+        </ul>
+        <a href="#" class="cta-button" data-translate="plano_premium_cta">Assine Agora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section id="comentarios">
+    <h2 data-translate="comentarios_title">O que Nossos Clientes Dizem</h2>
+    <div class="carrossel">
+      <div class="depoimento">
+        <img src="assets/images/cliente1.jpg" alt="Cliente 1">
+        <p data-translate="comentario1">"A Missfeld Tech transformou nosso negócio! Agora aparecemos no topo das pesquisas locais."</p>
+        <p class="nome">João Silva</p>
+        <p class="cargo" data-translate="cargo1">Gerente de Marketing</p>
+      </div>
+      <!-- Adicione mais depoimentos aqui -->
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato">
+    <h2 data-translate="contato_title">Fale Conosco</h2>
+    <div class="contato-container">
+      <form>
+        <input type="text" placeholder="Nome" required>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Assunto" required>
+        <textarea placeholder="Mensagem" required></textarea>
+        <button type="submit" class="cta-button" data-translate="contato_cta">Enviar Mensagem</button>
+      </form>
+      <div class="info-contato">
+        <p>Email: contato@missfeldtech.com</p>
+        <p>WhatsApp: +55 (11) 98765-4321</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="links-uteis">
+      <a href="#home">Home</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#planos">Planos</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <div class="redes-sociais">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p>© 2025 Missfeld Tech - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/translate.js"></script>
+</body>
+</html>
